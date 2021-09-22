@@ -1,0 +1,25 @@
+﻿@model TestApp.Models.Dashboard
+@{
+}
+
+<form class="form-group" method="post">
+
+    <b>Ad</b>
+    @Html.TextBoxFor(Value => Value.Name, new { @class = "form-control" })
+    <br />
+
+    <b>Soyad</b>
+    @Html.TextBoxFor(Value => Value.lastName, new { @class = "form-control" })
+    <br />
+
+    <b>Mail</b>
+    @Html.TextBoxFor(Value => Value.Mail, new { @class = "form-control" })
+    <br />
+
+    <b>Telefon</b>
+    @Html.TextBoxFor(Value => Value.Phone, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info m-b-20">Kayıt Ekle</button>
+
+</form>

@@ -1,0 +1,47 @@
+﻿@using TestApp.Models;
+@model List<Dashboard>
+
+
+
+@{
+}
+
+<br />
+<td><a href="/Dashboard/YeniKayıt/" class="btn btn-primary">Yeni Kayıt</a></td>
+<br />
+&nbsp
+<table class="table table-bordered">
+    <tr>
+        <th>
+            Ad
+        </th>
+        <th>
+            Soyad
+        </th>
+        <th>
+            Mail
+        </th>
+        <th>
+            Telefon
+        </th>
+        <th>
+            Düzenle
+        </th>
+        <th>
+            Sil
+        </th>
+    </tr>
+    <tr>
+        @foreach (var Value in Model)
+        {
+        <tr>
+            <td>@Value.Name</td>
+            <td>@Value.lastName</td>
+            <td>@Value.Mail</td>
+            <td>@Value.Phone</td>
+            <td><a href="/Dashboard/KayıtGetir/@Value.Id" class="btn btn-success">Düzenle</a></td>
+            <td><a href="/Dashboard/KayıtSil/@Value.Id" class="btn btn-danger">Sil</a></td>
+
+        </tr>
+    }
+    </table>
